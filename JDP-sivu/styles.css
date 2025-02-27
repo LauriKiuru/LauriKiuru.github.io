@@ -1,0 +1,46 @@
+/**
+ * Lataa Exo fontti googlen palvelimilta
+ */
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Exo", "sans-serif";
+    font-size: 36px;
+    color: #000000;
+    background-color: #ffffff;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+/*mobiilikoko*/
+@media (max-width: 600px) {
+}
+h1, h2 {
+    color: #00843d;
+    text-align: center;
+    padding: 50px;
+}
+
+header {
+    nav {
+        text-align: center;
+        background-color: #00843d;
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        display: inline-block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    a:hover{
+        background-color: red;
+    }
+    
+    .aktiivinen {
+        background-color: #04AA6D;
+        text-decoration: underline;
+    }
+}

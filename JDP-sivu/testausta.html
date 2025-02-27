@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keskitetyt li-elementit</title>
+    <style>
+        /* Säilödiv, joka varaa koko leveys ja keskittää sisällön */
+        .container {
+            width: 100%;
+            text-align: center; /* Keskittää kaikki sisällön */
+        }
+
+        ul {
+            list-style-type: none; /* Poistaa listan pisteet */
+            padding: 0; /* Poistaa sisennykset */
+        }
+
+        li {
+            display: inline-block; /* Asettaa li-elementit vierekkäin */
+            float: left; /* Kelluttaa vasemmalle */
+            border: 1px solid black;
+            margin: 5px;
+            padding: 10px;
+            width: auto; /* Voit säätää leveyttä tarpeen mukaan */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+</body>
+</html>
