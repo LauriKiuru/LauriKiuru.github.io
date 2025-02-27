@@ -11,14 +11,42 @@
     margin: 0;
     border: 0;
     padding: 0;
+
+    /**
+     * rivitä teksti, jos tämän poistaa --> pitkä teksti menee näytön ulkopuolelle
+     */
+    overflow-wrap: break-word;
 }
-/*mobiilikoko*/
-@media (max-width: 600px) {
+/**
+ * main-content luokassa määritellään pääsisällön asiat ilman että se vaikuttaa headeriin
+ * max-width --> kertoo kuinka iso osa tekstistä varataan keskialueelle
+ * margin: auto auto --> tee tyhjää tilaa (margin) vasempaan ja oikeaan reunaan
+ */
+.main-content {
+    max-width: 80%;
+    margin: auto auto;
 }
+
+/* .logo {
+    float: left;
+} */
+
 h1, h2 {
     color: #00843d;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 36px;
 }
 
 header {
@@ -30,6 +58,7 @@ header {
     }
     a {
         display: inline-block;
+        font-size: 36px;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -43,4 +72,9 @@ header {
         background-color: #04AA6D;
         text-decoration: underline;
     }
+}
+
+/* tehdään myöhemmin */
+/*mobiilikoko*/
+@media (max-width: 600px) {
 }
