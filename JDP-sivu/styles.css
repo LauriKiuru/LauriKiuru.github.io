@@ -25,19 +25,18 @@ h2 {
     font-size: 1.5em;
 }
 
-header {
-    .logo {
-        float: left;
-    }
+header .logo {
+    float: left;
+}
 
-    nav {
+header nav {
         text-align: center;
         background-color: #00843d;
         margin: 0;
         padding: 0;
     }
 
-    a {
+header a {
         display: inline-block;
         font-size: 36px;
         text-align: center;
@@ -45,19 +44,19 @@ header {
         color: black;
         background-color: #ffffff;
     }
-    a:not(.logo) {
+header a:not(.logo) {
         padding: 14px 16px;
     }
     
-    a:hover:not(.logo){
+header a:hover:not(.logo){
         background-color: red;
     }
     
-    .aktiivinen {
+header .aktiivinen {
         background-color: #04AA6D;
         text-decoration: underline;
     }
-}
+
 
 .main-content, footer {
     a {
@@ -78,30 +77,32 @@ header {
  * main-content luokassa määritellään pääsisällön asiat ilman että se vaikuttaa headeriin
  */
 .main-content {
-
     /**
      * max-width --> kertoo kuinka iso osa tekstistä varataan keskialueelle
      * margin: auto auto --> tee tyhjää tilaa (margin) vasempaan ja oikeaan reunaan
      */
     max-width: 90%;
     margin: auto auto;
-    img {
-        width: 100%;
-        height: 100%;
-    }
+}
 
-    a {
-        background-color: #00843d;
-        color: white;
-    }
-    .call_to_action {
-        width: 100%;
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    a:not(.call_to_action) {
-        padding: 15px 32px;
-    }
+.main-content img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-content a {
+    background-color: #00843d;
+    color: white;
+}
+
+.main-content .call_to_action {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.main-content a:not(.call_to_action) {
+    padding: 15px 32px;
 }
 
 footer {
@@ -113,56 +114,50 @@ footer {
         display: flex;
         justify-content: space-around;
     }
+}
 
-    a {
+footer a {
         padding: 16px 32px;
         background-color: white;
         color: black;
-    }
+}
 
-    h2 {
+footer h2 {
         font-size: 32px;
         font-weight: normal;
         color: black;
-    }
 }
 
 
 /*mobiilikoko*/
 @media (max-width: 1000px) {
-    .main-content {
-        .photodiv {
-            .grid-photo {grid-area: 'grid-photo';}
 
-            .grid-text {grid-area: 'grid-text';}
-            .grid-container {
-                display: grid;
-                grid-template-areas:
-                    'grid-photo',
-                    'grid-text';
-                gap: 2em;
-            }
-        }
+    /*pääsisällön grid*/
+    .grid-photo {grid-area: 'grid-photo';}
+
+    .grid-text {grid-area: 'grid-text';}
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'grid-photo',
+            'grid-text';
+        gap: 2em;
     }
-    footer {
-        .flex-container {
-            flex-direction: column;
-        }
+
+    /*footer flex*/
+    .flex-container{
+        flex-direction: column;
     }
 }
     
 /*suuri näyttö*/
 @media screen and (min-width: 1000px) {
-    .main-content {
-        .photodiv {
-            .grid-photo {grid-area: 'grid-photo';}
-            .grid-text {grid-area: 'grid-text';}
-            .grid-container {
-                display: grid;
-                grid-template-areas:
-                    'grid-photo grid-text grid-text grid-text';
-                gap: 2em;
-            }
-        }
+    .grid-photo {grid-area: 'grid-photo';}
+    .grid-text {grid-area: 'grid-text';}
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'grid-photo grid-text grid-text grid-text';
+        gap: 2em;
     }
 }
