@@ -60,7 +60,7 @@ a:hover {
 
 
 .main-content a, footer a{
-    border: 1px solid green;
+    border: 1px solid black;
     text-align: center;
     text-decoration: none;
     display: inline-block;
